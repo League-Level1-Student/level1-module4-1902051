@@ -9,6 +9,7 @@ import java.awt.Component;
 import java.awt.Frame;
 import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
+import java.awt.event.KeyListener;
 import java.net.URL;
 import java.util.Date;
 import java.util.HashMap;
@@ -30,19 +31,20 @@ public class SimonSays extends KeyAdapter {
 
 	// Complete steps 1 - 7 before you test
 	// 1. Declare a JFrame variable
-JFrame frame = new JFrame();
+	JFrame frame = new JFrame();
+
 	public void run() {
 		// 2. Add the four images that match keyboard keys like this:
-		 images.put(new Integer(KeyEvent.VK_UP), "up.jpg");
-		 images.put(new Integer(KeyEvent.VK_DOWN), "down.jpg");
-		 images.put(new Integer(KeyEvent.VK_RIGHT), "right.jpg");
-		 images.put(new Integer(KeyEvent.VK_LEFT), "left.jpg");
+		images.put(new Integer(KeyEvent.VK_UP), "up.jpg");
+		images.put(new Integer(KeyEvent.VK_DOWN), "down.jpg");
+		images.put(new Integer(KeyEvent.VK_RIGHT), "right.jpg");
+		images.put(new Integer(KeyEvent.VK_LEFT), "left.jpg");
 		// images.put(new Integer(KeyEvent.VK_UP), "up.jpg");
 
 		// 3. Use a JOptionPane to tell the user the rules: "Press the matching
 		// key when
 		// 'Simon says' otherwise press a different key"
-JOptionPane.showMessageDialog(null, "Press the Matching key when");
+		JOptionPane.showMessageDialog(null, "Press the Matching key when 'simon says' otherwise press a different key");
 		// 4. Call the showImage method to show an image
 		showImage();
 	}
@@ -78,26 +80,26 @@ JOptionPane.showMessageDialog(null, "Press the Matching key when");
 
 	private void points() {
 		// TODO Auto-generated method stub
-		
+
 	}
 
-	private void showImage() {
+	private void showImage(KeyListener true) {
 		// 5. Initialize your frame to a new JFrame()
-
+		frame = JFrame();
 		// 6. Set the frame to visible
-
+frame.isVisible();
 		// 7. Uncomment the following line to add a random image to your frame
-		// frame.add(getNextRandomImage());
+		frame.add(getNextRandomImage());
 
 		// 8. Set the name of your frame
-
+frame.setName("frame");
 		// 9. Pack the frame
-
+frame.pack();
 		// 10. Set the defaultCloseOperation of your frame to
-		// JFrame.EXIT_ON_CLOSE
-
+	//JFrame.EXIT_ON_CLOSE
+frame.getDefaultCloseOperation();
 		// 11. Add a key listener to the frame
-
+frame.addKeyListener(true);
 		// 12. Create a new instance of Random
 
 		// 13. Use the Random and the speak method to either say
@@ -105,6 +107,11 @@ JOptionPane.showMessageDialog(null, "Press the Matching key when");
 
 		// 14. Above, set the value of simonSays to true/false appropriately
 
+	}
+
+	private JFrame JFrame() {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 	private Component getNextRandomImage() {
@@ -127,4 +134,3 @@ JOptionPane.showMessageDialog(null, "Press the Matching key when");
 	}
 
 }
-
