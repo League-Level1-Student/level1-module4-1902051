@@ -87,35 +87,35 @@ public class SimonSays extends KeyAdapter {
 		// 5. Initialize your frame to a new JFrame()
 		frame = new JFrame();
 		// 6. Set the frame to visible
-frame.setVisible(true);
+		frame.setVisible(true);
 		// 7. Uncomment the following line to add a random image to your frame
 		frame.add(getNextRandomImage());
 
 		// 8. Set the name of your frame
-frame.setName("frame");
+		frame.setName("frame");
 		// 9. Pack the frame
-frame.pack();
+		frame.pack();
 		// 10. Set the defaultCloseOperation of your frame to
-	//JFrame.EXIT_ON_CLOSE
-frame.getDefaultCloseOperation();
+		// JFrame.EXIT_ON_CLOSE
+		frame.getDefaultCloseOperation();
 		// 11. Add a key listener to the frame
-frame.addKeyListener(this);
+		frame.addKeyListener(this);
 		// 12. Create a new instance of Random
-Random randy = new Random();
+		Random randy = new Random();
 		// 13. Use the Random and the speak method to either say
 		// "Simon says press this key" or "Press this key"
-int random = randy.nextInt(100);
-if (random > 50) {
-	speak("simon says press this key");
-}
+		int random = randy.nextInt(100);
+		if (random > 50) {
+			speak("simon says press this key");
+			simonSays = true;
+		}
 		// 14. Above, set the value of simonSays to true/false appropriately
+		else {
+speak ("press this key");		}
+		}
 
-	}
-
-	private JFrame JFrame() {
-		// TODO Auto-generated method stub
-		return null;
-	}
+	
+	// TODO Auto-generated method stub
 
 	private Component getNextRandomImage() {
 		this.imageIndex = new Random().nextInt(4) + 37;
