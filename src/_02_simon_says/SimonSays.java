@@ -19,6 +19,9 @@ import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
+
+import com.sun.xml.internal.ws.policy.PolicyIntersector;
+
 import java.io.IOException;
 
 public class SimonSays extends KeyAdapter {
@@ -53,10 +56,16 @@ public class SimonSays extends KeyAdapter {
 		// 15. Make a points variable to track the score.
 		int points = 0;
 		// 16. If the keyCode matches the imageIndex and "Simon says"
+if (e.getKeyCode() == imageIndex && simonSays) {
+
+	
+	
+}
 
 		// 17. Increase the value of score
-
-		// 18. Use the speak method to tell the user they were correct
+ points ++;
+	}
+	// 18. Use the speak method to tell the user they were correct
 
 		// 19. If the keyCode doesn't match the imageIndex and "Simon didn't
 		// say..."
@@ -76,7 +85,7 @@ public class SimonSays extends KeyAdapter {
 		// 23. Dispose of the frame
 
 		// 24. Call the showImage method to show a new image
-	}
+	
 
 	private void points() {
 		// TODO Auto-generated method stub
