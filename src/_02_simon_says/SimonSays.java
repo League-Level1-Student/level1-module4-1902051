@@ -56,28 +56,33 @@ public class SimonSays extends KeyAdapter {
 		// 15. Make a points variable to track the score.
 		int points = 0;
 		// 16. If the keyCode matches the imageIndex and "Simon says"
-if (e.getKeyCode() == imageIndex && simonSays) {
+		if (e.getKeyCode() == imageIndex && simonSays) {
 
-	
-	
-}
+		}
 
 		// 17. Increase the value of score
- points ++;
-	}
-	// 18. Use the speak method to tell the user they were correct
+		points++;
+
+		// 18. Use the speak method to tell the user they were correct
+		speak("YOU IS CORRECT");
 
 		// 19. If the keyCode doesn't match the imageIndex and "Simon didn't
 		// say..."
-
+if (e.getKeyCode() != imageIndex && simonSays == false) {
+	
+}
 		// 20. Increase the value of score
-
+points ++;
 		// 21. Use the speak method to tell the user they were correct
+speak("YOU IS CORRECT");
 
 		// 22. Increment tries by 1
-
+tries +=1;
 		// 25. If tries is greater than 9 (or however many you want)...
-
+if (tries > 9) {
+	
+	
+}
 		// 26. Tell the user their score
 
 		// 27. Exit the program
@@ -85,7 +90,7 @@ if (e.getKeyCode() == imageIndex && simonSays) {
 		// 23. Dispose of the frame
 
 		// 24. Call the showImage method to show a new image
-	
+	}
 
 	private void points() {
 		// TODO Auto-generated method stub
@@ -115,15 +120,15 @@ if (e.getKeyCode() == imageIndex && simonSays) {
 		// "Simon says press this key" or "Press this key"
 		int random = randy.nextInt(100);
 		if (random > 50) {
-			speak("simon says press this key");
+
 			simonSays = true;
 		}
 		// 14. Above, set the value of simonSays to true/false appropriately
 		else {
-speak ("press this key");		}
+			speak("press this key");
 		}
+	}
 
-	
 	// TODO Auto-generated method stub
 
 	private Component getNextRandomImage() {
