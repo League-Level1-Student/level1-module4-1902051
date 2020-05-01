@@ -43,7 +43,7 @@ public class FortuneTeller extends JPanel implements Runnable, MouseListener {
    	 int mouseX = e.getX();
    	 int mouseY = e.getY();
    	 // 5. Print the mouseX variable
-
+System.out.println(mouseX + "," + mouseY);
    	 // 6. Add the mouseY variable to the previous line so that it prints out too (no new line)
    	 // 7. Adjust your secret location co-ordinates here:
    	 int secretLocationX = 0;
@@ -92,7 +92,7 @@ pause("creepy-noise.wav");
 
 		// 8. If the random number is 3
 		if (rand == 3) {
-			JOptionPane.showMessageDialog(null, "");
+			JOptionPane.showMessageDialog(null, " Ask Aaron");
 		}
 	}
 }
