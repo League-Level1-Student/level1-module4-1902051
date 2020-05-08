@@ -61,7 +61,6 @@ System.out.println(mouseX + "," + mouseY);
 pause("creepy-noise.wav");
    		 // 12. Insert your completed Magic 8 ball code here
 //1. Make a main method that includes all the steps below….
-
 		// 2. Make a variable that will hold a random number and put a random number
 		// into this variable using "new Random().nextInt(4)"
 		int rand = new Random().nextInt(4);
@@ -98,7 +97,7 @@ pause("creepy-noise.wav");
 }
 //-- write your own answer
    	 
-
+    }
     
 
     private void pause(String string) {
